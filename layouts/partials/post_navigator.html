@@ -1,19 +1,17 @@
 <div style="font-size:0.8em;display:flex;gap:16px;justify-content:center;">
   <p>
-    {{ if .PrevInSection }}
-    <a href="{{ .PrevInSection.Permalink }}">
-      << Previous Post</a>
-        {{ else }}
-        <strike>
-          << Previous Post</strike>
-            {{ end }}
+    {{- if .PrevInSection -}}
+    <a href="{{ .PrevInSection.Permalink }}"><< Previous Post</a>
+    {{- else -}}
+    <strike><< Previous Post</strike>
+    {{- end -}}
   </p>
   <p>|</p>
   <p>
-    {{ if .NextInSection }}
+    {{- if .NextInSection -}}
     <a href="{{ .NextInSection.Permalink }}">Next Post >></a>
-    {{ else }}
+    {{- else -}}
     <strike>Next Post >></strike>
-    {{ end }}
+    {{- end -}}
   </p>
 </div>
