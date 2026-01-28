@@ -1,25 +1,25 @@
 <style>
       :root {
         --width: 720px;
-        --font-main: Verdana, sans-serif;
-        --font-secondary: Verdana, sans-serif;
+        --font-main: Georgia, serif;
+        --font-secondary: Georgia, serif;
         --font-scale: 1em;
         --background-color: #fff;
-        --heading-color: #222;
-        --text-color: #444;
-        --link-color: #3273dc;
-        --visited-color: #8b6fcb;
-        --blockquote-color: #222;
+        --heading-color: #000;
+        --text-color: #000;
+        --link-color: #0456B5;
+        --visited-color: #7526D6;
+        --blockquote-background-color: #edeef0;
       }
 
       @media (prefers-color-scheme: dark) {
         :root {
-          --background-color: #01242e;
-          --heading-color: #eee;
-          --text-color: #ddd;
-          --link-color: #8cc2dd;
-          --visited-color: #8b6fcb;
-          --blockquote-color: #ccc;
+          --background-color: #18191b;
+          --heading-color: #fff;
+          --text-color: #fff;
+          --link-color: #3B96FE;
+          --visited-color: #B476FF;
+          --blockquote-background-color: #2d3034;
         }
       }
 
@@ -29,7 +29,7 @@
         margin: auto;
         padding: 20px;
         max-width: var(--width);
-        text-align: left;
+        text-align: justify;
         background-color: var(--background-color);
         word-wrap: break-word;
         overflow-wrap: break-word;
@@ -102,7 +102,7 @@
 
       blockquote {
         border-left: 1px solid #999;
-        color: var(--blockquote-color);
+        background-color: var(--blockquote-background-color);
         padding-left: 20px;
         font-style: italic;
       }
