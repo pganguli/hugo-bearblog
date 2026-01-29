@@ -1,1 +1,7 @@
-{{- with .Site.Params.footer -}}{{ . | markdownify }}{{- else -}}<small>{{ .Site.Copyright }}</small>{{- end -}}
+{{- range $i, $e := .Site.Menus.footer }}
+      {{- if $i -}}&ensp;&bull;&ensp;{{- end -}}
+      <a href="{{ $e.URL }}">{{ $e.Name }}</a>
+{{- end }}
+      <br>
+      <small>{{ .Site.Copyright | markdownify }}</small>
+{{- /**/ -}}
