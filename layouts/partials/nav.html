@@ -1,3 +1,7 @@
 {{- range .Site.Menus.main }}
+  {{- if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+        <strong><a href="{{ .URL }}">{{ .Name }}</a></strong>
+  {{- else }}
         <a href="{{ .URL }}">{{ .Name }}</a>
+  {{- end -}}
 {{- end -}}
